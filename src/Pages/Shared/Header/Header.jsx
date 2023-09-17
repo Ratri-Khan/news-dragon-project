@@ -17,9 +17,9 @@ const Header = () => {
                 Journalism Without Fear or Favor</small></p>
                <p> {moment().format("MMM Do YY")}</p>            
             </div>
-               <div className='d-flex'>
+               <div className='d-flex mb-3'>
                <Button variant="danger">Danger</Button>
-               <Marquee>
+               <Marquee className='bg-light'>
                    I can be a React component, multiple React components, or just some text.
                </Marquee>
                </div>
@@ -28,9 +28,9 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
-                            <Nav.Link href="/home">Home</Nav.Link>
-                            <Nav.Link href="#pricing">About</Nav.Link>
-                            <Nav.Link href="#pricing">Career</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/about">About</Nav.Link>
+                            <Nav.Link href="/career">Career</Nav.Link>
                         </Nav>
                         <Nav>
                             {user &&

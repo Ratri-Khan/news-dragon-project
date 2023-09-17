@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import Header from '../Pages/Shared/Header/Header';
 import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from '../Pages/Shared/LeftNav/LeftNav';
@@ -12,11 +13,16 @@ const Main = () => {
         <div>
            <Header></Header>
            
-           <Container>
-                
-                <Banner></Banner>
-                {/* <Footer></Footer> */}
+           <Container className='d-flex'>
+              <Row>
+                <Col lg={3}><LeftNav></LeftNav></Col>
+                <Col lg={6}><Outlet></Outlet></Col>
+                <Col lg={3}><RightNav></RightNav></Col>
+              </Row>
+             
+             
            </Container>
+
         </div>
     );
 };

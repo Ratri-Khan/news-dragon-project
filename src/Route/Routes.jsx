@@ -1,46 +1,28 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
-import Header from "../Pages/Shared/Header/Header";
 import Login from "../Pages/login/Login";
-import Footer from "../Pages/Footer/Footer";
-import LoginLayout from "../Layout/loginLayout/LoginLayout";
-import Banner from "../Pages/Banner/Banner";
+import Home from "../Pages/Home/Home/Home";
+import Category from "../Pages/category/Category";
 
 
 const router = createBrowserRouter([
  {
     path: "/",
-    element: <LoginLayout></LoginLayout>,
+    element: <Main></Main>,
     children:[
-    //   {
-    //     path:'/',
-    //     element:<Navigate to="/category"></Navigate>
-    // // },
+      // {
+      //   path:'/',
+      //   element:<Home></Home>
+      // },
       {
           path:'/login',
           element:<Login></Login>
       },
-      // {
-      //   path:'/',
-      //   element:<Footer></Footer>
-      // },
       {
-        path:'/',
-        element:<Banner></Banner>
+        path:'/category/:id',
+        element:<Category></Category>
       },
     ]
-  },
-
-    {
-      path: "/",
-      element: <Main></Main>,
-      children:[
-        {
-          path:'/header',
-          element:<Banner></Banner>
-        }
-      ]
-      
-    },
+  }
   ]);
   export default router;
